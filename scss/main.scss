@@ -1,0 +1,362 @@
+// google font link
+@import url("https://fonts.googleapis.com/css2?family=Ephesis&family=Lato:wght@100;400&family=Roboto:wght@900&display=swap");
+// firefox scrollbar
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(128, 255, 236) rgb(36, 47, 64);
+}
+
+// Custom style
+body {
+  background-color: rgb(36, 47, 64);
+  // Scroll bar
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+  &::-webkit-scrollbar-track {
+    background: rgb(36, 47, 64);
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgb(128, 255, 236);
+    border-radius: 20px;
+    border: 3px solid rgb(36, 47, 64);
+  }
+}
+
+//  side-bar
+
+.sidebar-right {
+  left: 0;
+  p {
+    transform: rotate(90deg);
+    position: relative;
+    top: -6.5rem;
+    left: 5px;
+  }
+}
+.sidebar-right,
+.sidebar-left {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  position: fixed;
+  color: rgb(128, 255, 236);
+  width: 5rem;
+
+  .line {
+    background-color: rgb(128, 255, 236);
+    min-height: 4rem;
+    min-width: 2px;
+    position: relative;
+    bottom: 0;
+  }
+}
+.sidebar-left {
+  right: 0;
+
+  ul li {
+    list-style-type: none;
+    a {
+      font-size: 1.7rem;
+      color: rgb(128, 255, 236);
+      position: relative;
+      left: -15px;
+      &:hover {
+        font-size: 3rem;
+      }
+      .svg {
+        width: 150px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+// Header style
+header {
+  color: white;
+  width: 100vw;
+  left: 7.5rem;
+  background-color: rgb(36, 47, 64);
+  position: fixed;
+  text-align: center;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  a {
+    text-decoration: none !important;
+    h2 {
+      font-family: "Ephesis", cursive;
+      color: white;
+
+      span {
+        color: rgb(128, 255, 236);
+      }
+    }
+  }
+  //   Nav style
+  nav {
+    padding-left: 120px;
+    ul {
+      li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 10px;
+        a {
+          text-decoration: none;
+          color: white;
+          text-transform: capitalize;
+          letter-spacing: 2px;
+          padding: 9px;
+          transition: 0.3s;
+          &:hover {
+            color: rgb(36, 47, 64);
+            background-color: rgb(128, 255, 236);
+            text-decoration: none;
+            box-shadow: 0 0 10px rgb(128, 255, 236), 0 0 40px rgb(128, 255, 236),
+              0 0 80px rgb(128, 255, 236);
+            border-radius: 2px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Home Page style
+#home {
+  height: 100%;
+  margin: 0 auto;
+  .home-page {
+    width: 100%;
+    height: 100vh;
+    .home-text {
+      color: white;
+      max-width: 60%;
+      h6 {
+        border: 1px solid rgb(128, 255, 236);
+        width: 173px;
+        padding: 10px;
+        color: rgb(128, 255, 236);
+        margin: 0 0 20px;
+        letter-spacing: 2px;
+      }
+      h1 {
+        font-weight: 900;
+        color: rgb(128, 255, 236);
+        font-size: 3rem;
+        margin: 0 0 20px;
+        font-family: "Roboto";
+        text-transform: capitalize;
+        letter-spacing: 3px;
+      }
+      p {
+        letter-spacing: 2px;
+        font-family: "Lato";
+        max-width: 80%;
+      }
+      button {
+        background-color: rgb(128, 255, 236);
+      }
+      button:hover {
+        background: transparent !important;
+        color: rgb(128, 255, 236);
+        border: 1px solid rgb(128, 255, 236);
+      }
+    }
+    .img {
+      width: 60%;
+      img {
+        width: 90%;
+        position: relative;
+        top: 1;
+        -webkit-animation: 3s ease infinite image;
+        -moz-animation: 3s ease infinite image;
+        animation: 3s ease infinite image;
+      }
+      @-webkit-keyframes image {
+        0% {
+          margin-top: 12px;
+        }
+
+        100% {
+          margin-top: 20px;
+        }
+      }
+      @-moz-keyframes image {
+        0% {
+          margin-top: 12px;
+        }
+
+        100% {
+          margin-top: 20px;
+        }
+      }
+      @keyframes image {
+        0% {
+          margin-top: 12px;
+        }
+
+        100% {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+// Arrow Down
+.mouse {
+  margin: 50px auto;
+  width: 100px;
+  position: absolute;
+  top: 80%;
+  left: 40%;
+
+  button {
+    background: transparent;
+    border: none;
+  }
+
+  .mouse-icon {
+    width: 25px;
+    height: 45px;
+    border: 2px solid white;
+    border-radius: 15px;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+  }
+  .mouse-wheel {
+    height: 6px;
+    margin: 2px auto 0;
+    display: block;
+    width: 3px;
+    background-color: white;
+    border-radius: 50%;
+    -webkit-animation: 1.6s ease infinite wheel-up-down;
+    -moz-animation: 1.6s ease infinite wheel-up-down;
+    animation: 1.6s ease infinite wheel-up-down;
+  }
+  @-webkit-keyframes wheel-up-down {
+    0% {
+      margin-top: 2px;
+      opacity: 0;
+    }
+    30% {
+      opacity: 1;
+    }
+    100% {
+      margin-top: 20px;
+      opacity: 0;
+    }
+  }
+  @-moz-keyframes wheel-up-down {
+    0% {
+      margin-top: 2px;
+      opacity: 0;
+    }
+    30% {
+      opacity: 1;
+    }
+    100% {
+      margin-top: 20px;
+      opacity: 0;
+    }
+  }
+  @keyframes wheel-up-down {
+    0% {
+      margin-top: 2px;
+      opacity: 0;
+    }
+    30% {
+      opacity: 1;
+    }
+    100% {
+      margin-top: 20px;
+      opacity: 0;
+    }
+  }
+}
+
+#about {
+  margin: 0 auto;
+  max-width: 80vw;
+  height: 100vh;
+  .img {
+    width: 50%;
+    img {
+      width: 10px;
+    }
+  }
+  .about-text {
+    font-family: "Lato";
+    .lil {
+      letter-spacing: 5px;
+    }
+    h3 {
+      color: rgb(128, 255, 236);
+      font-family: "Roboto" sans-serif;
+      letter-spacing: 2px;
+      font-size: 3rem;
+    }
+    p {
+      letter-spacing: 1px;
+    }
+  }
+}
+
+// Skill section
+
+#skills {
+  width: 80vw;
+  height: 100vh;
+  // margin: 0 auto;
+  overflow: hidden;
+  padding: 0;
+
+  .skill-intro {
+    padding-top: 2rem;
+    width: 33%;
+    margin-right: 10rem;
+    position: relative;
+    left: 0;
+    h3 {
+      color: rgb(128, 255, 236);
+      font-family: "Roboto" sans-serif;
+      letter-spacing: 2px;
+      font-size: 3rem;
+    }
+    p {
+      font-family: "Lato";
+    }
+  }
+  .skills {
+    width: 100%;
+    // background-color: red;
+    height: 100vh;
+    padding-top: 1rem;
+    .skill-list {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      height: 19rem;
+      margin-left: 0px;
+      margin-top: 0;
+      i {
+        font-size: 3rem;
+        padding: 10px;
+        color: rgb(128, 255, 236);
+      }
+      span {
+        color: rgb(128, 255, 236);
+      }
+      img {
+        width: 4rem;
+        margin: 1rem;
+      }
+    }
+  }
+}
