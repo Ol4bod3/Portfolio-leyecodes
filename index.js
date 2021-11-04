@@ -1,4 +1,7 @@
-const nav = document.querySelector("#nav");
+const nav = document.querySelector("#header");
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
 let lastScrollY = window.scrollY;
 
 window.addEventListener("scroll", () => {
@@ -10,3 +13,10 @@ window.addEventListener("scroll", () => {
   }
   lastScrollY = window.scrollY;
 });
+
+hamburger.addEventListener("click", moblieMenu);
+
+function mobileMenu() {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+}
