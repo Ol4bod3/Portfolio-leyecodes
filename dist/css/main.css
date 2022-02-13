@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Ephesis&family=Lato:wght@100;400&family=Roboto:wght@900&display=swap");
 * {
+  margin: 0;
+  scroll-behavior: smooth;
+  padding: 0;
+  box-sizing: border-box;
   scrollbar-width: thin;
   scrollbar-color: #80ffec #242f40;
 }
@@ -30,13 +34,235 @@ body::-webkit-scrollbar-thumb {
   background-color: #80ffec;
 }
 
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#header {
+  height: 4rem;
+  width: 100%;
+  align-items: center;
+  background-color: #242f40;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 5px 10px -6px black;
+}
+#header .hamburger {
+  display: none;
+}
+#header .hamburger .bar {
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: red;
+  display: block;
+}
+#header .nav-logo {
+  font-family: "Ephesis";
+  font-size: 1.9rem;
+  color: white;
+}
+#header .nav-logo span {
+  color: #80ffec;
+  padding: 1px;
+}
+#header .nav-item a {
+  color: white;
+  text-transform: capitalize;
+}
+#header .nav-item a:hover {
+  background-color: #80ffec;
+  color: #242f40;
+  border-radius: 2px;
+  box-shadow: 0 0 50px 1px #80ffec;
+}
+
+.cursor {
+  position: fixed;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  left: -100px;
+  top: 50%;
+  mix-blend-mode: difference;
+  background-color: transparent;
+  z-index: 999;
+  border: 1px solid #fff;
+  height: 40px;
+  width: 40px;
+  transition: all 300ms ease-out;
+}
+
+.mouse {
+  margin: 50px auto;
+  width: 100px;
+  position: absolute;
+  top: 80%;
+  left: 40%;
+}
+.mouse button {
+  background: transparent;
+  border: none;
+}
+.mouse .mouse-icon {
+  width: 25px;
+  height: 45px;
+  border: 2px solid white;
+  border-radius: 15px;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+}
+.mouse .mouse-wheel {
+  height: 6px;
+  margin: 2px auto 0;
+  display: block;
+  width: 3px;
+  background-color: white;
+  border-radius: 50%;
+  -webkit-animation: 1.6s ease infinite wheel-up-down;
+  animation: 1.6s ease infinite wheel-up-down;
+}
+@-webkit-keyframes wheel-up-down {
+  0% {
+    margin-top: 2px;
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    margin-top: 20px;
+    opacity: 0;
+  }
+}
+@keyframes wheel-up-down {
+  0% {
+    margin-top: 2px;
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    margin-top: 20px;
+    opacity: 0;
+  }
+}
+
+#about {
+  height: 100vh !important;
+}
+
+#skills {
+  margin-top: 20px;
+}
+#skills .skills-container {
+  width: 100%;
+  height: 100vh !important;
+  padding-top: 4rem;
+}
+#skills .skills-container .skill-text {
+  position: relative;
+  width: 100%;
+  margin: 20px;
+  top: 50px;
+}
+#skills .skills-container .skill-list {
+  width: 50%;
+}
+#skills .skills-container .skill-list .fas,
+#skills .skills-container .skill-list .fab {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#projects {
+  height: 100%;
+  width: 100vw;
+  text-align: center;
+  padding-top: 0.4rem;
+}
+#projects .projects {
+  text-align: center;
+}
+#projects .projects .pro-text {
+  margin: 0 auto;
+  padding: 40px;
+}
+#projects .projects .pro-text h2 {
+  font-size: 2.3rem;
+  color: #80ffec;
+}
+#projects .projects .project-container {
+  width: 70%;
+  height: 50vh;
+  margin: 0 auto;
+  margin-bottom: 130px;
+  background-image: linear-gradient(120deg, rgba(128, 255, 236, 0.3), rgba(128, 255, 236, 0.3)), url(../../images/project6.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0 2px 10px black;
+}
+#projects .projects .project-container .num {
+  color: #fff;
+  width: 20px;
+  position: relative;
+  top: -10%;
+  left: 80%;
+}
+#projects .projects .project-container .num h2 {
+  font-size: 3rem;
+  font-family: "Lato";
+  font-weight: thin;
+}
+#projects .projects .project-container .project-text {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 45%;
+  margin: 0 auto;
+  position: relative;
+  top: 190px;
+  background-color: #242f40;
+  box-shadow: 0 2px 10px black;
+}
+#projects .projects .project-container .project-text h5 {
+  color: #80ffec;
+}
+#projects .projects .project-container .project-text p {
+  color: #fff;
+}
+#projects .projects .pro-2 {
+  background-image: linear-gradient(120deg, rgba(128, 255, 236, 0.3), rgba(128, 255, 236, 0.3)), url(../../images/project2.jpg);
+}
+#projects .projects .pro-3 {
+  background-image: linear-gradient(120deg, rgba(128, 255, 236, 0.3), rgba(128, 255, 236, 0.3)), url(../../images/project3.jpg);
+}
+#projects .projects .pro-4 {
+  background-image: linear-gradient(120deg, rgba(128, 255, 236, 0.3), rgba(128, 255, 236, 0.3)), url(../../images/project4.jpg);
+}
+#projects .projects .pro-5 {
+  background-image: linear-gradient(120deg, rgba(128, 255, 236, 0.3), rgba(128, 255, 236, 0.3)), url(../../images/project5.jpg);
+}
+
 @media (max-width: 768px) {
   body {
     background: #242f40;
     color: white;
   }
   body::-webkit-scrollbar {
-    width: 12px;
+    width: 1px;
   }
   body::-webkit-scrollbar-track {
     background: #242f40;
@@ -44,28 +270,20 @@ body::-webkit-scrollbar-thumb {
   body::-webkit-scrollbar-thumb {
     background-color: #80ffec;
     border-radius: 20px;
-    border: 3px solid#242f40;
+    border: 1px solid#242f40;
   }
 
   #header {
     display: none;
     height: 3rem;
-    width: 100vw;
-    align-items: center;
-    left: 0;
-    background-color: #242f40;
-    position: fixed;
-    text-align: center;
-    top: 0;
-    z-index: 999;
-    display: flex;
-    justify-content: space-between;
-    box-shadow: 0 5px 10px -6px black;
+  }
+  #header .nav-logo {
+    font-size: 1.5rem;
   }
   #header .nav-menu {
-    position: fixed;
-    left: -100%;
-    top: 5rem;
+    position: absolute;
+    left: -150%;
+    top: 3.5rem;
     flex-direction: column;
     width: 100%;
     border-radius: 10px;
@@ -73,15 +291,24 @@ body::-webkit-scrollbar-thumb {
     transition: 0.3s;
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.5);
   }
+  #header .nav-menu .nav-item {
+    margin: 1rem;
+  }
   #header .nav-menu.active {
     left: 0;
   }
-  #header .nav-menu .nav-item {
-    margin: 2.5rem;
-  }
-  #header .nav-menu .hamburger {
+  #header .hamburger {
     display: block;
     cursor: pointer;
+  }
+  #header .hamburger .bar {
+    background-color: #80ffec;
+  }
+
+  .active {
+    display: block;
+    height: 100vh;
+    background-color: #242f40;
   }
 
   .sidebar {
@@ -209,45 +436,58 @@ body::-webkit-scrollbar-thumb {
     width: 2.5rem;
     margin: 10px;
   }
+}
+@media (min-width: 1024px) {
+  .sidebar-right {
+    left: 0;
+  }
+  .sidebar-right p {
+    transform: rotate(90deg);
+    position: relative;
+    top: -6.5rem;
+    left: 5px;
+  }
 
-  #project {
-    height: 130%;
-    width: 100vw;
-    text-align: center;
-    padding-top: 2rem;
+  .sidebar-right,
+.sidebar-left {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    position: fixed;
+    color: #80ffec;
+    width: 5rem;
   }
-  #project .projects {
-    text-align: center;
-  }
-  #project .projects .pro-text {
-    margin: 0 auto;
-    padding: 20px;
-  }
-  #project .projects .pro-text h2 {
-    font-size: 2.3rem;
-  }
-  #project .projects .project-container {
-    width: 80vw;
-    height: 50vh;
-    margin: 0 auto;
-    margin-bottom: 130px;
-  }
-  #project .projects .project-container .num {
-    width: 60px;
+  .sidebar-right .line,
+.sidebar-left .line {
+    background-color: #80ffec;
+    min-height: 4rem;
+    min-width: 2px;
     position: relative;
-    top: -20px;
-    left: 250px;
-    height: 60px;
+    bottom: 0;
   }
-  #project .projects .project-container .num h2 {
+
+  .sidebar-left {
+    right: 0;
+  }
+  .sidebar-left ul li {
+    list-style-type: none;
+  }
+  .sidebar-left ul li a {
+    font-size: 1.7rem;
+    color: #80ffec;
+    position: relative;
+    left: -15px;
+  }
+  .sidebar-left ul li a:hover {
     font-size: 3rem;
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   }
-  #project .projects .project-container .project-text {
-    width: 75vw;
-    height: 40%;
-    margin: 0 auto;
-    position: relative;
-    top: 200px;
+
+  #home {
+    height: 100vh;
+  }
+  #home .home-page {
+    height: 100vh;
   }
 }/*# sourceMappingURL=main.css.map */
