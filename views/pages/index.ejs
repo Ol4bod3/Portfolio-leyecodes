@@ -20,7 +20,7 @@
       rel="stylesheet"
     />
     <!-- Custom CSS link -->
-    <link rel="stylesheet" href="./dist/css/main.css" />
+    <link rel="stylesheet" href="./scss/main.css" />
   </head>
   <body>
     <!-- Header section -->
@@ -32,6 +32,7 @@
           justify-content-between
           align-items-center
           w-100
+          h-100
         "
       >
        <!-- Nav bar -->
@@ -86,9 +87,9 @@
     </div>
     <div class="cursor" id="cursor"></div>
       <!-- Home Section -->
-      <section class="container" id="home">
+      <section class="container d-flex justify-content-center align-items-center" id="home">
         <div class="home-page text-white d-flex align-items-center justify-content-center ">
-          <div class="home-text m-5">
+          <div class="home-text w-70 m-2">
             <h6>Hello World I'm</h6>
             <h1>Olabode Olaleye</h1>
             <h3 class="work">Web developer</h3>
@@ -98,7 +99,7 @@
              I am a Cyber Security enthusiast turn Web developer and currently Staying in Nigeria.
             </p>
 
-            <button class="btn mt-3" id="contact">Hire Me</button>
+            <button class="btn mt-3">  <a href="#contact"> Hire Me </a> </button>
           </div>
           <div class="img w-50">
             <img src="./images/main-page.png" alt="" />
@@ -121,7 +122,7 @@
             </div>
             <div class="about-text w-100">
               <p class="text-white lil" >Here is little</p>
-              <h3 class="head-text text-white">About Me</h3>
+              <h3 class="head-text">About Me</h3>
               <p class="text-white">
                 My name is Olabode Olaleye and most of my friends call me Clay. I am a Cyber Security enthusiast turn Web developer and currently Staying in Nigeria, Am a person who has high passion in computer security and web development. One of my dream is to earn Cyber Security certificates as mush as i can. OSCP and OSWE included &#128521;.
               </p>
@@ -137,36 +138,31 @@
 
       <!-- Skill Section -->
       <section class="container" id="skills">
-        <div class="skills-container d-flex">
-            <h3 class=" text-white p-2">Skillset</h3>
+        <div class="skills-container d-flex justify-content-between align-items-center">
+          <div class="top-con"> 
+          <h3>Skillset</h3>
             <p class="skill-text text-white">
               with over 2 years experience in Web Development and Security. I am
               the perfect person to hire when it comes to full fledged secure
               project. what ever your needs, I can pretty much take on any
               challenge.
             </p>
-
+          </div>
            
-            <div class="text-white d-flex flex-wrap mt-5">
-              <div class="skill-list col-lg-4 html_css_js">
+            <div class="skills text-white d-flex flex-wrap justify-content-center align-items-center">
+              <div class="skill-list col-lg-4">
                 <i class="fas fa-code"></i>
                 <h4>HTML CSS JS</h4>
                 <p>with over <span> 80% </span> knowledge HTML CSS and JS. I can build an Awesome front-end web application using </p>
               </div>
               
-            <div class="skill-list col-lg-4 pl-3 react">
+            <div class="skill-list col-lg-4">
               <i class="fab fa-react"></i>
               <h4>Reactjs</h4>
               <p>with over <span> 65% </span> knowledge in Reactjs. I can build Awesome Reactjs Applications.</p>
             </div>
-            <div class="skill-list col-lg-3 node">
-              <i class="fab fa-node"></i>
-              <h4>Nodejs</h4>
-              <p>
-                with over <span> 60% </span> knowledge in Nodejs. I can build awesome secured Nodejs Application.</p>
-              </p>
-            </div>
-            <div class="skill-list col-lg-5 web-sec">
+           
+            <div class="skill-list col-lg-4">
               <i class="fas fa-shield-alt"></i>
               <h4>Web Application Security</h4>
               <p>
@@ -174,11 +170,7 @@
                 Security. I can test and secure a web application.
               </p>
             </div>
-            <div class="skill-list col-lg-5 network">
-              <i class="fas fa-network-wired"></i>
-              <h4>Network</h4>
-              <p>with over <span> 54% </span> knowledge Computer Network. I can keep a company's computer network running seamlessly and up-to-the-minute.</p>
-            </div>
+           
           </div>    
         </div>
        </div>
@@ -192,7 +184,8 @@
             <p class="text-white">Here are </p>
             <h2>My Projects</h2>
           </div>
-          <div  >
+          <div class="d-flex flex-wrap align-content-center justify-content-center" >
+       
           <div class="project-container pro-1">
             <div class="num">
               <h2>01</h2>
@@ -233,9 +226,39 @@
         </div>
         </div>
       </section>
+
+      <!-- Contact Section -->
+      <section class="container" id="contact">
+        <div class="container d-flex align-content-center justify-content-center ">
+          <div class="form-con d-flex flex-column align-items-center justify-content-center">
+            <h2 class="text-white mb-5">Get In Touch</h2>
+            <form class="row g-3">
+              <div class="col-md-6">
+                <input type="text" class="form-control" required placeholder="Name">
+              </div>
+              <div class="col-md-6">
+                <input type="email" class="form-control" required placeholder="Email">
+              </div>
+              <div class="col-12">
+                <textarea type="text" class="form-control" placeholder="Type your message here..."></textarea>
+              </div>
+             
+              <div class="col-12">
+                <button type="submit" class="btn "><i class="fas fa-jet"></i> Send</button>
+              </div>
+            </form>
+          </div>
+          <div class="google-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.323724545264!2d3.3749430498148114!3d6.480621625436567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b8068ae5929%3A0x4abdc35fb1437007!2s21%20Brickfield%20Rd%2C%20Ebute%20Metta%20101245%2C%20Lagos!5e0!3m2!1sen!2sng!4v1645049139037!5m2!1sen!2sng" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </section>
+      <!-- End of Contact Section -->
+      <Footer class="w-10 d-flex justify-content-center align-items-center">
+        <p class="text-white">Copyright &copy; 2022 Leyecodes. All right reserved.</p>
+      </Footer>
     </main>
     <!-- End of Main Section -->
-
     <!-- Bootstrap JS link -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
