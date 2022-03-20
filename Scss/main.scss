@@ -541,10 +541,18 @@ footer {
   }
   .active {
     display: block;
-    height: 100vh;
+    height: 80vh;
     background-color: #{$dark};
-    li a {
-      font-size: 1.4rem;
+    ul {
+      position: relative;
+      top: 10%;
+      li {
+        position: absolute;
+        top: 200%;
+        a {
+          font-size: 1.4rem;
+        }
+      }
     }
   }
 

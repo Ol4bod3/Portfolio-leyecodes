@@ -468,10 +468,18 @@ footer p {
 
   .active {
     display: block;
-    height: 100vh;
+    height: 80vh;
     background-color: #242f40;
   }
-  .active li a {
+  .active ul {
+    position: relative;
+    top: 10%;
+  }
+  .active ul li {
+    position: absolute;
+    top: 200%;
+  }
+  .active ul li a {
     font-size: 1.4rem;
   }
 
