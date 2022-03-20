@@ -441,7 +441,7 @@ footer p {
   #header .nav-menu {
     position: absolute;
     left: -350%;
-    top: 1.5rem;
+    top: 3.5rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -452,7 +452,7 @@ footer p {
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.5);
   }
   #header .nav-menu .nav-item {
-    margin-top: 1rem;
+    margin-top: 3rem;
     width: 100%;
   }
   #header .nav-menu.active {
@@ -470,6 +470,9 @@ footer p {
     display: block;
     height: 100vh;
     background-color: #242f40;
+  }
+  .active li a {
+    font-size: 1.4rem;
   }
 
   .cursor {
