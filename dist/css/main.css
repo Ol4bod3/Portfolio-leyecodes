@@ -94,11 +94,12 @@ a {
 .sidebar-right {
   left: 0;
 }
-.sidebar-right p {
+.sidebar-right a {
   transform: rotate(90deg);
   position: relative;
-  top: -6.5rem;
+  top: -7.5rem;
   left: 5px;
+  color: #80ffec;
 }
 
 .sidebar-right,
@@ -297,8 +298,8 @@ a {
   height: 250px;
   margin: 10px;
   margin-bottom: 30px;
-  background-image: linear-gradient(120deg, rgba(128, 255, 236, 0.3), rgba(128, 255, 236, 0.3)), url(../../images/project6.jpg);
-  background-size: cover;
+  background-image: linear-gradient(120deg, rgba(128, 255, 236, 0.3), rgba(128, 255, 236, 0.3)), url(../../images/project1.png);
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
   box-shadow: 0 2px 10px black;
@@ -311,7 +312,7 @@ a {
 }
 #projects .projects .project-container:hover .project-text {
   opacity: 1;
-  transform: translateY(10px);
+  transform: translateY(-40px);
 }
 #projects .projects .project-container:before {
   content: "";
@@ -327,7 +328,7 @@ a {
   opacity: 0;
 }
 #projects .projects .project-container .num {
-  color: #fff;
+  color: #80ffec;
   width: 20px;
   position: relative;
   top: -12%;
@@ -335,7 +336,7 @@ a {
   z-index: 4;
 }
 #projects .projects .project-container .num h2 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-family: "Lato";
   font-weight: thin;
 }
@@ -348,23 +349,40 @@ a {
 }
 #projects .projects .project-container .project-text h5 {
   color: #80ffec;
-  font-size: 16px;
+  font-size: 1.5rem;
 }
 #projects .projects .project-container .project-text p {
   color: #fff;
 }
+#projects .projects .project-container .project-text button {
+  border: 1px solid #80ffec;
+  padding: 7px;
+  color: #fff;
+  border-radius: 5px;
+  background: transparent;
+  margin: 5px;
+}
+#projects .projects .project-container .project-text button:hover {
+  background-color: #80ffec;
+}
+#projects .projects .project-container .project-text button:hover a {
+  color: #242f40;
+}
+#projects .projects .project-container .project-text button a {
+  color: #80ffec;
+}
 #projects .projects .pro-2 {
-  background-image: linear-gradient(120deg, rgba(128, 255, 236, 0.3), rgba(128, 255, 236, 0.3)), url(../../images/project1.png);
+  background-image: linear-gradient(120deg, rgba(128, 255, 236, 0.3), rgba(128, 255, 236, 0.3)), url(../../images/project2.png);
   background-size: 100% 100%;
 }
 #projects .projects .pro-3 {
-  background-image: linear-gradient(120deg, rgba(128, 255, 236, 0.3), rgba(128, 255, 236, 0.3)), url(../../images/project3.jpg);
+  background-image: linear-gradient(120deg, rgba(128, 255, 236, 0.3), rgba(128, 255, 236, 0.3)), url(../../images/project3.png);
 }
 #projects .projects .pro-4 {
-  background-image: linear-gradient(120deg, rgba(128, 255, 236, 0.3), rgba(128, 255, 236, 0.3)), url(../../images/project4.jpg);
+  background-image: linear-gradient(120deg, rgba(128, 255, 236, 0.3), rgba(128, 255, 236, 0.3)), url(../../images/project4.png);
 }
 #projects .projects .pro-5 {
-  background-image: linear-gradient(120deg, rgba(128, 255, 236, 0.3), rgba(128, 255, 236, 0.3)), url(../../images/project5.jpg);
+  background-image: linear-gradient(120deg, rgba(128, 255, 236, 0.3), rgba(128, 255, 236, 0.3)), url(../../images/project5.png);
 }
 
 #contact {
@@ -460,6 +478,7 @@ footer p {
   .mouse {
     position: absolute;
     top: 85% !important;
+    left: 35%;
   }
 
   .sidebar {
@@ -494,7 +513,7 @@ footer p {
     text-align: center;
   }
   #home .home-page .home-text h1 {
-    font-size: 240%;
+    font-size: 250%;
     margin-top: 20px;
     margin-bottom: 20px;
     color: #80ffec;
@@ -629,17 +648,17 @@ footer p {
 }
 @media (max-width: 360px) {
   #home h6 {
-    font-size: 80% !important;
+    font-size: 110% !important;
   }
   #home h1 {
-    font-size: 170% !important;
+    font-size: 190% !important;
   }
   #home h3 {
-    font-size: 100% !important;
+    font-size: 150% !important;
   }
   #home p {
-    font-size: 80% !important;
-    line-height: 1.5re !important;
+    font-size: 140% !important;
+    line-height: 1rem !important;
   }
 
   #contact .form-con {

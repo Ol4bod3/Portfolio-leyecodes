@@ -106,11 +106,12 @@ a {
 
 .sidebar-right {
   left: 0;
-  p {
+  a {
     transform: rotate(90deg);
     position: relative;
-    top: -6.5rem;
+    top: -7.5rem;
     left: 5px;
+    color: #{$light};
   }
 }
 .sidebar-right,
@@ -338,8 +339,8 @@ a {
           rgba(128, 255, 236, 0.3),
           rgba(128, 255, 236, 0.3)
         ),
-        url(../../images/project6.jpg);
-      background-size: cover;
+        url(../../images/project1.png);
+      background-size: 100% 100%;
       background-repeat: no-repeat;
       background-position: center;
       box-shadow: 0 2px 10px black;
@@ -350,7 +351,7 @@ a {
         }
         .project-text {
           opacity: 1;
-          transform: translateY(10px);
+          transform: translateY(-40px);
         }
       }
       &:before {
@@ -367,7 +368,7 @@ a {
         opacity: 0;
       }
       .num {
-        color: #fff;
+        color: #{$light};
         width: 20px;
         position: relative;
         top: -12%;
@@ -375,7 +376,7 @@ a {
         z-index: 4;
 
         h2 {
-          font-size: 3rem;
+          font-size: 3.5rem;
           font-family: "Lato";
           font-weight: thin;
         }
@@ -389,10 +390,27 @@ a {
 
         h5 {
           color: #{$light};
-          font-size: 16px;
+          font-size: 1.5rem;
         }
         p {
           color: #fff;
+        }
+        button {
+          border: 1px solid #{$light};
+          padding: 7px;
+          color: #fff;
+          border-radius: 5px;
+          background: transparent;
+          margin: 5px;
+          &:hover {
+            background-color: #{$light};
+            a {
+              color: #{$dark};
+            }
+          }
+          a {
+            color: #{$light};
+          }
         }
       }
     }
@@ -403,7 +421,7 @@ a {
           rgba(128, 255, 236, 0.3),
           rgba(128, 255, 236, 0.3)
         ),
-        url(../../images/project1.png);
+        url(../../images/project2.png);
       background-size: 100% 100%;
     }
     .pro-3 {
@@ -412,7 +430,7 @@ a {
           rgba(128, 255, 236, 0.3),
           rgba(128, 255, 236, 0.3)
         ),
-        url(../../images/project3.jpg);
+        url(../../images/project3.png);
     }
     .pro-4 {
       background-image: linear-gradient(
@@ -420,7 +438,7 @@ a {
           rgba(128, 255, 236, 0.3),
           rgba(128, 255, 236, 0.3)
         ),
-        url(../../images/project4.jpg);
+        url(../../images/project4.png);
     }
     .pro-5 {
       background-image: linear-gradient(
@@ -428,7 +446,7 @@ a {
           rgba(128, 255, 236, 0.3),
           rgba(128, 255, 236, 0.3)
         ),
-        url(../../images/project5.jpg);
+        url(../../images/project5.png);
     }
   }
 }
@@ -533,6 +551,7 @@ footer {
   .mouse {
     position: absolute;
     top: 85% !important;
+    left: 35%;
   }
 
   // main section
@@ -568,7 +587,7 @@ footer {
           text-align: center;
         }
         h1 {
-          font-size: 240%;
+          font-size: 250%;
           margin-top: 20px;
           margin-bottom: 20px;
           color: #{$light};
@@ -714,18 +733,18 @@ footer {
 @media (max-width: 360px) {
   #home {
     h6 {
-      font-size: 80% !important;
+      font-size: 110% !important;
     }
     h1 {
-      font-size: 170% !important;
+      font-size: 190% !important;
     }
 
     h3 {
-      font-size: 100% !important;
+      font-size: 150% !important;
     }
     p {
-      font-size: 80% !important;
-      line-height: 1.5re !important;
+      font-size: 140% !important;
+      line-height: 1rem !important;
     }
   }
   #contact {
